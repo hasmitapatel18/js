@@ -1,0 +1,28 @@
+<script>
+
+  if (!localStorage.getItem('counter'))
+    localStorage.setItem('counter', 0);
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // set counter inner html to value of localstorage counter variable
+    document.querySelector('#counter').innerHTML = localStorage.getItem('counter')
+    // count everytime button is clicked
+    document.querySelector('button').onclick = () => {
+
+      // increment current counter
+      let counter = localStorage.getItem('counter');
+      counter++;
+
+      // update counter
+      document.querySelector('#counter').innerHTML = counter;
+      localStorage.setItem('counter', counter);
+    }
+  });
+
+
+</script>
+
+<h1 id="counter">0</h1>
+<button>Click Here</button>

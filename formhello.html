@@ -1,0 +1,16 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#form').onsubmit = function() {
+      const name = document.querySelector('#name').value;
+      alert(`Hello ${name}!`);
+    };
+  });
+
+
+</script>
+
+
+<form id="form">
+  <input id="name" autocomplete="off" autocomplete placeholder="Name" type="text">
+  <input type="submit">
+</form>

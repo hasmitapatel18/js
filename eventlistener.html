@@ -1,0 +1,24 @@
+<script>
+  // instead of using onclick js button, define using addEventListener which takes two arguments- DOMContentLoaded and function(). better since it can accomodate multiple buttons this way
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('button').onclick = count; });
+
+  // variable counter
+  let counter = 0
+  // js function count()
+  function count() {
+    // increment counter
+    counter++;
+    // query select html element id=counter and change inner html element ie 0 to the counter variable
+    document.querySelector('#counter').innerHTML = counter;
+
+
+    // mod 10 === 0 (=== in js shows exact equality) (ie multiple of 10), will show message and current number defined in template literal using `` (backtick) and ${name_of_variable}
+    if (counter % 10 === 0) {
+      alert(`counter is at ${counter}!`); }}
+
+</script>
+
+<h1 id="counter">0</h1>
+
+<button>click here</button>
